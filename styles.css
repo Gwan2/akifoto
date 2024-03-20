@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+    margin: none;
+    padding: none;
+}
+body{
+    margin:0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.vid_div {
+    overflow: hidden;
+    display:flex;
+    /* background-color: lightblue; */
+
+    justify-content: center;
+    align-items: center;
+
+    height: auto;
+    width: 100vw;
+
+    margin-left: none;
+    margin-right: none;
+    margin-bottom: 10vh;
+    min-height: 300px;
+    max-height: 80vh;
+    overflow: hidden;
+
+}
+
+.vid_div video {
+    width: auto;
+    max-width: 100vw;
+    height: 100%;
+}
+
+
+
+.Links {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    max-width: 1000px;
+    /* background-color: beige; */
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.Button {
+    display: inline-flex;
+    /* background-color: lightpink; */
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: auto;
+    font-family: 'EB Garamond';
+    font-size: 30px;
+
+    cursor:pointer;
+    
+
+}
+
+.Button:hover {
+    font-style: italic;
+
+
+}
+
+.Bolleke {
+    display: inline-flex;
+    /* background-color: magenta; */
+    justify-content: center;
+    align-items: center;
+    width: 5vw;
+    height: auto;
+    
+}
+
+.divider {
+    
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 80vw;
+
+}
+
+.divider hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid black; /* Adjust border properties as needed */
+
+
+}
+.About {
+    position: relative;
+    height: 80vh;
+    display:flex;
+    margin-bottom: 5vh;
+    background-color: #dedede;
+    z-index: 1;
+    
+}
+
+.About_Axelle_txt {
+
+    position:absolute;
+    left: 54%;
+    top: -10%;
+    width: 39vw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
+}
+
+.about_text {
+    max-width: 80vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+
+}
+
+.img-div {
+    display: flex;
+    width: 100vw; /* Set the width of your div */
+    height: auto; /* Set the height of your div */
+    overflow: hidden; /* Hide any part of the image that goes beyond the div */
+    max-height: 800px;
+    z-index: 2;
+    align-items: center;
+    transition: transform 0.5s ease;
+}
+
+.img-div img {
+    position: relative;
+    
+    width: auto; /* Make the image take up 100% of the width of the div */
+    height: 100%; /* Maintain the aspect ratio of the image */
+    display: block; /* Make the image a block element to prevent any extra space below it */
+
+}
+
+
+.about_kop {
+    justify-self: flex-start;
+    position: relative;
+
+}
+
+.kop {
+    font-family: 'EB Garamond';
+    font-size: 45px;
+
+}
+
+#pfk {
+    margin-bottom: 80px;
+}
+
+.text {
+    font-family: 'Raleway';
+    font-size: 20px;
+
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    /* background: linear-gradient(to right, rgba(156, 219, 246, 0.5), rgba(148, 206, 196, 0.5), rgba(150, 211, 144, 0.5)); */
+    height: auto;
+    width: 100vw;
+    margin: 0;
+
+
+
+}
+
+.styled-link {
+    margin-top: 2vh;
+    margin-left: 40vw;
+    margin-right:40vw;
+    margin-bottom: 2vh;
+    text-decoration: none;
+
+}
+
+.styled-link:active {
+    color:black
+}
+
+.styled-link:link {
+    color:black;
+} 
+
+.styled-link:hover {
+    font-style: italic;
+}
+
+.styled-link:visited {
+    color:black;
+} 
+
+
+
+.cirkel {
+    overflow: visible; /* Apply overflow to hide any content that overflows the circle */
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    min-width: 200px;
+    min-height: 200px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+
+    border-radius: 50%;
+
+}
+
+.c_img_div {
+    position: absolute;
+    overflow: hidden;
+    width: inherit;
+    min-width: inherit;
+    height: inherit;
+    min-height: inherit;
+    border-radius: 50%; /* This makes the div circular */
+
+}
+.cirkel img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 1s ease;
+}
+
+
+
+.cirkelkop {
+    font-size: 20px;
+    position: absolute;
+    width: 20vw;
+    min-width: 200px;
+    min-height: 200px;
+    height: 20vw;
+    top: -50px;
+    text-align: center;
+    z-index: 1;
+
+}
+.cirkelkop:hover {
+    font-style: italic;
+}
+.cirkelkop:visited {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    color: black;
+}
+
+.c1:hover img{
+    width: 120%;
+}
+
+.c2:hover img{
+    width: 120%;
+}
+
+.c3:hover img{
+    width: 120%;
+}
+
+.c4:hover img{
+    width: 120%;
+}
+
+.c5:hover img{
+    width: 120%;
+}
+
+.Contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: auto;
+    overflow: hidden;
+}
+
+.contact_kop{
+    width: 80vw;
+    height: 5vw;
+    margin: 2vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    position: relative;
+
+}
+.contact_text {
+    margin: 5px 10vw;
+    width: 40vw;
+    max-width: 80vw;
+
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -10vh;
+    left: 5vw;
+    background-color: rgb(255, 255, 255);
+    width: 20vw;
+    min-width: 300px;
+    height: auto;
+
+}
+
+.socials .fa {
+    position: absolute;
+    top: 100%;
+    bottom: 50%;
+    color: #000000;
+    font-size: 30px;
+    line-height: 50px;
+    transition: .5s;
+}
+.socials .fa:hover {
+    color: #ffffff;
+}
+.socials a {
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 75px;
+    height: 75px;
+    margin: 20px 30px;
+    border-radius: 50%;
+    background-color: rgba(110, 110, 110, 0.195);
+    text-align: center;
+    font-size: 30px;
+    transition: 0.5s;
+    transform: translate(0,-100px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.socials a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0px, -110px);
+}
+
+.socials > *:nth-child(1):hover {
+    background-color: #3b5999;
+}
+.socials > *:nth-child(2):hover {
+    background-color: #e4405f;
+}
+.socials > *:nth-child(3):hover {
+    background-color: #0077B5;
+}
+.socials > *:nth-child(4):hover {
+    background-color: #cd201f;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #d0d0d0;
+    text-align: center;
+}
+
+
+a {
+    color: black;
+    text-decoration: none; /* Remove underline */
+}
+
+/* Set link hover color to gray */
+a:hover {
+    color: gray;
+}
+
+/* Set link focus color to gray */
+a:focus {
+    color: gray;
+}
+
+/* Set link active color to gray */
+a:active {
+    color: gray;
+}
+
+@media screen and (max-width: 1200px) and (min-width:650px){
+    .img-div img {
+        
+        transform: translateX(-15%);
+        
+    }
+}
+@media screen and (max-width: 750px) {
+    .Contact {
+        justify-content: center;
+    }
+
+    .contact_kop {
+        text-align: center;
+    }
+
+    .contact_text {
+        width: 80vw;
+    }
+    .socials {
+        top: 0;
+        left:0;
+        width: 80vw;
+        margin: 10px 10px;
+        transform: translate(0,0px)
+    }
+
+    .socials a {
+        margin: 10px 10px;
+        transform: translate(0,0px);
+    }
+
+    .socials a:hover {
+        transform: translate(0,-10px) 
+
+    }
+
+}
+@media screen and (max-width: 650px) {
+    .kop {
+        font-size: 25px;
+    }
+    .text {
+        font-size: 15px;
+    }
+    .cirkelkop {
+        font-size: 15px;
+        width: 25vh;
+        height: 30vh;
+        top: -15%;
+    }
+    .cirkel {
+        width: 25vh;
+        height: 25vh;
+    }
+    #pfk {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+    .About {
+        height: auto;
+        flex-wrap: wrap;
+        z-index: 0;
+        justify-content: center;
+        background-color: #ffffff
+    }
+
+    .About_Axelle_txt {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+    
+    }
+    .img-div {
+        display: flex;
+        width: 100vw; /* Set the width of your div */
+        height: auto; /* Set the height of your div */
+        overflow: hidden; /* Hide any part of the image that goes beyond the div */
+        max-height: 800px;
+        z-index: 2;
+        align-items: center;
+        transition: transform 0.5s ease;
+    }
+    
+    .img-div img {
+        position: relative;
+        
+        width: 100%; /* Make the image take up 100% of the width of the div */
+        height: auto; /* Maintain the aspect ratio of the image */
+        display: block; /* Make the image a block element to prevent any extra space below it */
+
+        transform: translateX(0%);
+    }
+    }
+
