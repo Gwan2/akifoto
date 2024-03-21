@@ -102,7 +102,7 @@ body{
     height: 80vh;
     display:flex;
     margin-bottom: 5vh;
-    background-color: #dedede;
+    background-color: #dddddd;
     z-index: 1;
     
 }
@@ -425,7 +425,6 @@ a:active {
 
 @media screen and (max-width: 1200px) and (min-width:650px){
     .img-div img {
-        
         transform: translateX(-15%);
         
     }
@@ -513,6 +512,7 @@ a:active {
     
     .img-div img {
         position: relative;
+        content: url(media/axelle_wit.jpg);
         
         width: 100%; /* Make the image take up 100% of the width of the div */
         height: auto; /* Maintain the aspect ratio of the image */
