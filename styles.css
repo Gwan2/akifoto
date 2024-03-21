@@ -298,9 +298,25 @@ body{
 .Contact {
     display: flex;
     flex-wrap: wrap;
+    flex-shrink: 0;
     align-content: flex-start;
     height: auto;
     overflow: hidden;
+}
+
+
+.kaartje_div {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    overflow:hidden;
+    background-color: pink;
+
+}
+
+.kaartje_div img {
+    height: 100px;
+
 }
 
 .contact_kop{
@@ -322,7 +338,6 @@ body{
 .socials {
     display: flex;
     flex-wrap: wrap;
-    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     position: relative;
