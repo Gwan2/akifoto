@@ -304,47 +304,44 @@ body{
     overflow: hidden;
 }
 
-
 .kaartje_div {
     flex-shrink: 0;
-    width: 100px;
-    height: 100px;
-    overflow:hidden;
+    width: 40vw;
+    align-content: center;
     background-color: pink;
 
 }
 
 .kaartje_div img {
-    height: 100px;
-
+    width: 100%;
+    height: auto;
 }
 
 .contact_kop{
-    width: 80vw;
+    width: 40vw;
     height: 5vw;
     margin: 2vh;
     margin-left: 10vw;
-    margin-right: 10vw;
+    margin-right: 5vw;
     position: relative;
 
 }
 .contact_text {
     margin: 5px 10vw;
+    margin-right: 5vw;
     width: 40vw;
     max-width: 80vw;
+    height: fit-content;
 
 }
 
 .socials {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: -10vh;
-    left: 5vw;
+    justify-content: flex-start;
+    margin: 0 10vw;
     background-color: rgb(255, 255, 255);
-    width: 20vw;
+    width: 40vw;
     min-width: 300px;
     height: auto;
 
@@ -370,17 +367,16 @@ body{
     justify-content: center;
     width: 75px;
     height: 75px;
-    margin: 20px 30px;
+    margin: 5px 5px;
     border-radius: 50%;
     background-color: rgba(110, 110, 110, 0.195);
     text-align: center;
     font-size: 30px;
     transition: 0.5s;
-    transform: translate(0,-100px);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
 .socials a:hover {
-    transform: rotate(0deg) skew(0deg) translate(0px, -110px);
+    transform: rotate(0deg) skew(0deg) translate(0px, -10px);
 }
 
 .socials > *:nth-child(1):hover {
@@ -397,6 +393,7 @@ body{
 }
 
 footer {
+    margin-top: 20px;
     display: flex;
     width: 100%;
     align-items: center;
@@ -434,6 +431,9 @@ a:active {
     }
 }
 @media screen and (max-width: 750px) {
+    .text_div {
+        order: 2;
+    }
     .Contact {
         justify-content: center;
     }
