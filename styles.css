@@ -308,7 +308,6 @@ body{
     flex-shrink: 0;
     width: 40vw;
     align-content: center;
-    background-color: pink;
 
 }
 
@@ -339,10 +338,9 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    margin: 0 10vw;
+    margin: 50px 10vw;
     background-color: rgb(255, 255, 255);
     width: 40vw;
-    min-width: 300px;
     height: auto;
 
 }
@@ -356,44 +354,43 @@ body{
     line-height: 50px;
     transition: .5s;
 }
-.socials .fa:hover {
-    color: #ffffff;
+.socials .social:nth-of-type(1):hover {
+    color: #3b5999;
 }
+
+.socials .social:nth-of-type(2):hover {
+    color: #e4405f;
+}
+
+.socials .social:nth-of-type(3):hover {
+    color: #0077B5;
+}
+
+.socials .social:nth-of-type(4):hover {
+    color: #cd201f;
+}
+
 .socials a {
     position: relative;
     display: flex;
     flex-shrink: 0;
     align-items: center;
     justify-content: center;
-    width: 75px;
-    height: 75px;
+    width: 25px;
+    height: 25px;
     margin: 5px 5px;
     border-radius: 50%;
-    background-color: rgba(110, 110, 110, 0.195);
+    background-color: rgba(255, 255, 255, 0.195);
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     transition: 0.5s;
-    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
 .socials a:hover {
     transform: rotate(0deg) skew(0deg) translate(0px, -10px);
 }
 
-.socials > *:nth-child(1):hover {
-    background-color: #3b5999;
-}
-.socials > *:nth-child(2):hover {
-    background-color: #e4405f;
-}
-.socials > *:nth-child(3):hover {
-    background-color: #0077B5;
-}
-.socials > *:nth-child(4):hover {
-    background-color: #cd201f;
-}
-
 footer {
-    margin-top: 20px;
+    margin-top: 10vh;
     display: flex;
     width: 100%;
     align-items: center;
@@ -430,6 +427,12 @@ a:active {
     }
 }
 @media screen and (max-width: 750px) {
+    .kaartje_div {
+        width: 80vw;
+    }
+    .kaartje_div img {
+        transform: translate(6%, 0);
+    }
     .text_div {
         order: 2;
     }
@@ -437,19 +440,12 @@ a:active {
         justify-content: center;
     }
 
-    .contact_kop {
-        text-align: center;
-    }
-
     .contact_text {
         width: 80vw;
     }
     .socials {
-        top: 0;
-        left:0;
         width: 80vw;
-        margin: 10px 10px;
-        transform: translate(0,0px)
+        justify-content: center;
     }
 
     .socials a {

@@ -1,3 +1,3 @@
-Persoonlijke website voor Axelle Daem (Akifotografie) 
+Website voor fotografe Axelle Daem (Akifotografie) 
 
 Gemaakt door Gyan Delvoye
