@@ -296,6 +296,7 @@ body{
 }
 
 .Contact {
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     flex-shrink: 0;
@@ -305,23 +306,26 @@ body{
 }
 
 .kaartje_div {
+    display: flex;
     flex-shrink: 0;
     width: 40vw;
-    align-content: center;
+    align-items: center;
 
 }
 
 .kaartje_div img {
     width: 100%;
     height: auto;
+    transform: rotate(-4deg);
 }
 
 .contact_kop{
     width: 40vw;
-    height: 5vw;
-    margin: 2vh;
+    height: auto;
     margin-left: 10vw;
     margin-right: 5vw;
+    margin-bottom: 20px;
+    
     position: relative;
 
 }
@@ -428,10 +432,7 @@ a:active {
 }
 @media screen and (max-width: 750px) {
     .kaartje_div {
-        width: 80vw;
-    }
-    .kaartje_div img {
-        transform: translate(6%, 0);
+        display: none;
     }
     .text_div {
         order: 2;
