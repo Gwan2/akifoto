@@ -20,7 +20,7 @@ body{
     justify-content: center;
     align-items: center;
 
-    height: 80vh;
+    height: auto;
     width: 100vw;
 
     margin-left: none;
