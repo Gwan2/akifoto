@@ -34,7 +34,7 @@ body{
 
 .vid_div video {
     height: 100%;
-    width: auto;
+    width: 100%;
 }
 
 
@@ -461,6 +461,9 @@ a:active {
 
 }
 @media screen and (max-width: 650px) {
+    .Button {
+        font-size: 25px !important;
+    }
     .kop {
         font-size: 25px;
     }
