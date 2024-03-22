@@ -99,7 +99,7 @@ body{
 }
 .About {
     position: relative;
-    height: 80vh;
+    height: auto;
     display:flex;
     margin-bottom: 5vh;
     background-color: #dddddd;
