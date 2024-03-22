@@ -21,14 +21,10 @@ body{
     align-items: center;
 
     width: 100vw;
-    aspect-ratio: 1080/1920;
-
-    margin-left: none;
-    margin-right: none;
-    margin-bottom: 10vh;
+    height: calc(100vw * 0.5625);
+    margin-bottom: 5vh;
     min-height: 300px;
     max-height: 80vh;
-    overflow: hidden;
 
 }
 
