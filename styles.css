@@ -215,14 +215,14 @@ body{
 .cirkel {
     overflow: visible; /* Apply overflow to hide any content that overflows the circle */
     position: relative;
-    width: 20vw;
-    height: 20vw;
+    width: 19vw;
+    height: 19vw;
     min-width: 200px;
     min-height: 200px;
-    margin-left: 5vw;
-    margin-right: 5vw;
-    margin-bottom: 5vh;
-    margin-top: 5vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+    margin-bottom: 4vh;
+    margin-top: 2vh;
 
     border-radius: 50%;
 
@@ -253,10 +253,10 @@ body{
 .cirkelkop {
     font-size: 20px;
     position: absolute;
-    width: 20vw;
+    width: 19vw;
     min-width: 200px;
     min-height: 200px;
-    height: 20vw;
+    height: 19vw;
     top: -50px;
     text-align: center;
     z-index: 1;
@@ -425,12 +425,21 @@ a:active {
     color: gray;
 }
 
+@media screen and (max-width: 950px) {
+    .cirkel {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+}
+
 @media screen and (max-width: 1200px) and (min-width:650px){
     .img-div img {
         transform: translateX(-15%);
         
     }
 }
+
+
 @media screen and (max-width: 750px) {
     .kaartje_div {
         display: none;
@@ -481,6 +490,8 @@ a:active {
     .cirkel {
         width: 25vh;
         height: 25vh;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
     }
     #pfk {
         margin-top: 50px;
