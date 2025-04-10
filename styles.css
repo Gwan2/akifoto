@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Top en Setup*/
+
 .seo{
     display: none;
-
 }
+
+
 html{
     margin: none;
     padding: none;
 }
+
 body{
     margin:0;
     padding: 0;
@@ -16,34 +20,33 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.vid_div {
-    overflow: visible;
-    display:flex;
-    /* background-color: lightblue; */
 
-    justify-content: center;
-    align-items: center;
+/* logonaam*/
 
-    width: 100vw;
-    height: calc(100vw * 0.5625);
-    margin-bottom: 5vh;
-    min-height: 300px;
-    max-height: 80vh;
+#logonaam {
 
+    height: auto;
+    max-height: 100%;
+    max-width:80%;
 }
 
-.vid_div video {
-    height: 100% !important;
+.Naamlogodiv {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    height: 10vh;
     width: 100%;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
 }
 
-
+/* Links */
 
 .Links {
-    margin-top: 6vh;
-    margin-bottom: 3vh;
-    max-width: 1000px;
-    /* background-color: beige; */
+    width: 60vw;
+    height: 5vh;
+    background-color: beige; 
     display: flex;
     text-align: center;
     justify-content: center;
@@ -53,7 +56,7 @@ body{
 .Button {
     font-size: 35px !important;
     display: inline-flex;
-    /* background-color: lightpink; */
+    background-color: lightpink; 
     justify-content: center;
     align-items: center;
     width: 25vw;
@@ -81,82 +84,90 @@ body{
     
 }
 
-.divider {
-    
-    display: flex;
-    align-items: center;
-    height: 10vh;
-    width: 80vw;
+/* Video */
 
-}
-
-.divider hr {
-    width: 100%;
-    border: none;
-    border-top: 1px solid black; /* Adjust border properties as needed */
-
-
-}
-.About {
-    position: relative;
-    height: auto;
+.vid_div {
+    height: 80vh;
+    overflow: visible;
     display:flex;
+    background-color: lightblue;
+
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+
+
+}
+
+.vid_div video {
+    height: 120% !important;
+    width: 100%;
+}
+
+/* About */
+
+.About {
+    height: 80vh;
+    width: 100%;
+    display:flex;
+    flex-direction: horizontal;
     margin-bottom: 5vh;
     background-color: #dddddd;
     z-index: 1;
     
 }
 
-.About_Axelle_txt {
 
-    position:absolute;
-    left: 54%;
-    top: -10%;
-    width: 39vw;
-    height: 100%;
+
+.About img {
+    width: 40%;
+    height: auto;
+    object-fit: contain;
+
+}
+
+.About_txt {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     z-index: 3;
 
-}
+    margin-left: 5%;
+    margin-right: 5%;
 
-.about_text {
-    max-width: 80vw;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    text-align: center;
 
 }
 
-.img-div {
-    display: flex;
-    width: 100vw; /* Set the width of your div */
-    height: auto; /* Set the height of your div */
-    overflow: hidden; /* Hide any part of the image that goes beyond the div */
-    max-height: 800px;
-    z-index: 2;
-    align-items: center;
-    transition: transform 0.5s ease;
+.About_txt p {
+    font-size: 1.3vw;
+    font-family: 'Raleway';
 }
 
-.img-div img {
-    position: relative;
-    
-    width: auto; /* Make the image take up 100% of the width of the div */
-    height: 100%; /* Maintain the aspect ratio of the image */
-    display: block; /* Make the image a block element to prevent any extra space below it */
-
+.About_txt img {
+    height: auto;
+    width: 15%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
+@media screen and (max-width: 950px) {
+    .About {
+        
+        flex-direction:column;
+        align-items: center;
+    }
 
-.about_kop {
-    justify-self: flex-start;
-    position: relative;
+    .About_txt img {
+        margin: 0 auto;
+    }
 
+    .About_txt p {
+        font-size: 1.5vh;
+    }
 }
+
+/* Portfolio */ 
 
 .kop {
     font-family: 'EB Garamond';
@@ -164,11 +175,6 @@ body{
 
 }
 
-#pfk {
-    margin-bottom: 80px;
-    width: 100%;
-    text-align: center;
-}
 
 .text {
     font-family: 'Raleway';
@@ -176,7 +182,18 @@ body{
 
 }
 
-.portfolio {
+.pkop {
+    height: 10vh;
+    width: 100%;
+    background-color:aqua;
+    display:flex;
+    justify-content:center;
+}
+
+.pkop img {
+    height: 100%;
+}
+.cirkels {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -185,11 +202,9 @@ body{
     /* background: linear-gradient(to right, rgba(156, 219, 246, 0.5), rgba(148, 206, 196, 0.5), rgba(150, 211, 144, 0.5)); */
     height: auto;
     width: 100vw;
-    margin: 0;
-
-
-
+    margin-top: 8vh;
 }
+
 
 .styled-link {
     margin-top: 2vh;
@@ -498,46 +513,6 @@ a:active {
         height: 25vh;
         margin-top: 5vh;
         margin-bottom: 5vh;
-    }
-    #pfk {
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-    .About {
-        height: auto;
-        flex-wrap: wrap;
-        z-index: 0;
-        justify-content: center;
-        background-color: #ffffff
-    }
-
-    .About_Axelle_txt {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 100%;
-    
-    }
-    .img-div {
-        display: flex;
-        width: 100vw; /* Set the width of your div */
-        height: auto; /* Set the height of your div */
-        overflow: hidden; /* Hide any part of the image that goes beyond the div */
-        max-height: 800px;
-        z-index: 2;
-        align-items: center;
-        transition: transform 0.5s ease;
-    }
-    
-    .img-div img {
-        position: relative;
-        content: url(media/axelle_wit.jpg);
-        
-        width: 100%; /* Make the image take up 100% of the width of the div */
-        height: auto; /* Maintain the aspect ratio of the image */
-        display: block; /* Make the image a block element to prevent any extra space below it */
-
-        transform: translateX(0%);
     }
     }
 
