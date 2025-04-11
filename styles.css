@@ -31,14 +31,21 @@ body{
 }
 
 .Naamlogodiv {
-    margin-top: 2vh;
-    margin-bottom: 1vh;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
     height: 10vh;
     width: 100%;
     overflow: hidden;
     align-items: center;
     display: flex;
     justify-content: center; /* Center the image horizontally */
+}
+
+@media screen and (max-width: 950px) {
+    .Naamlogodiv {
+        margin-top: 2vh;
+        margin-bottom: 1vh;
+    }
 }
 
 /* Links */
@@ -53,16 +60,18 @@ body{
 
 }
 
+
 .Button {
-    font-size: 35px !important;
+    font-size: 35px !important ;
     display: inline-flex;
     /* background-color: lightpink;  */
     justify-content: center;
     align-items: center;
-    width: 25vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    min-width: fit-content;
+    width: 10vw;
     height: auto;
-    font-family: 'EB Garamond';
-    font-size: 30px;
     cursor:pointer;
     
 
@@ -87,7 +96,7 @@ body{
 /* Video */
 
 .vid_div {
-    height: 80vh;
+    height: 70vh;
     overflow: visible;
     display:flex;
     /* background-color: lightblue; */
@@ -116,8 +125,6 @@ body{
     z-index: 1;
     
 }
-
-
 
 .About img {
     width: 40%;
@@ -183,7 +190,7 @@ body{
 }
 
 .pkop {
-    height: 10vh;
+    height: 15vh;
     width: 100%;
     /* background-color:aqua; */
     display:flex;
@@ -198,7 +205,6 @@ body{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-
     /* background: linear-gradient(to right, rgba(156, 219, 246, 0.5), rgba(148, 206, 196, 0.5), rgba(150, 211, 144, 0.5)); */
     height: auto;
     width: 100vw;
