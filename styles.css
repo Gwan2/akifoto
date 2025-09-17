@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-.seo{
-    display: none;
+/* Top en Setup*/
 
-}
 html{
     margin: none;
     padding: none;
 }
+
 body{
     margin:0;
     padding: 0;
@@ -16,34 +15,32 @@ body{
     align-items: center;
     flex-direction: column;
 }
-.vid_div {
-    overflow: visible;
-    display:flex;
-    /* background-color: lightblue; */
 
-    justify-content: center;
-    align-items: center;
+/* naamlogo*/
 
-    width: 100vw;
-    height: calc(100vw * 0.5625);
-    margin-bottom: 5vh;
-    min-height: 300px;
-    max-height: 80vh;
-
+#naamlogo {
+    height: auto;
+    max-height: 100%;
+    max-width:80%;
 }
 
-.vid_div video {
-    height: 100% !important;
+
+.Naamlogodiv {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    height: max(8vh, 6vw);
     width: 100%;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Center the image horizontally (along main axis)*/
 }
 
-
+/* Links */
 
 .Links {
-    margin-top: 6vh;
-    margin-bottom: 3vh;
-    max-width: 1000px;
-    /* background-color: beige; */
+    width: 60vw;
+    height: 5vh;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -51,132 +48,133 @@ body{
 }
 
 .Button {
-    font-size: 35px !important;
-    display: inline-flex;
-    /* background-color: lightpink; */
-    justify-content: center;
-    align-items: center;
+
+    display:flex;
+    font-size: max(4vh, 2vw);;
+
+    align-items:center;
+    justify-content:center;
+
     width: 25vw;
+    min-width: fit-content;
     height: auto;
     font-family: 'EB Garamond';
-    font-size: 30px;
     cursor:pointer;
     
-
 }
 
 .Button:hover {
     font-style: italic;
-
-
 }
 
 .Bolleke {
     display: inline-flex;
-    /* background-color: magenta; */
     justify-content: center;
     align-items: center;
     width: 5vw;
+    min-width: 25px;
     height: auto;
     
 }
 
-.divider {
+/* Video */
+
+.vid_div {
     
-    display: flex;
-    align-items: center;
-    height: 10vh;
-    width: 80vw;
+    height: min(80vh, 75vw); /* At high width -> 80vh. When screen width decreases, goes to 90vw */
 
-}
-
-.divider hr {
-    width: 100%;
-    border: none;
-    border-top: 1px solid black; /* Adjust border properties as needed */
-
-
-}
-.About {
-    position: relative;
-    height: auto;
+    overflow: visible;
     display:flex;
-    margin-bottom: 5vh;
-    background-color: #dddddd;
-    z-index: 1;
-    
+
+    justify-content: center;
+    align-items: center;
 }
 
-.About_Axelle_txt {
+.vid_div video {
+    height: 120% !important;
+    width: 100%;
+    z-index: -1;
+}
 
-    position:absolute;
-    left: 54%;
-    top: -10%;
-    width: 39vw;
-    height: 100%;
+/* About */
+
+.About {
+    height: fit-content;
+    width: 100%;
+    display:flex;
+    flex-direction: horizontal;
+    padding: 15vh 0;    
+}
+
+
+
+.About img {
+    width: 30vw;
+    height: auto;
+    object-fit: contain;
+
+}
+
+.About_txt {
 
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    z-index: 3;
+
+    margin-left: 5%;
+    margin-right: 5%;
 
 }
 
-.about_text {
-    max-width: 80vw;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    text-align: center;
-
+.About_txt p {
+    font-size: max(1.3vw, 15px);
+    font-family: 'Raleway';
 }
 
-.img-div {
-    display: flex;
-    width: 100vw; /* Set the width of your div */
-    height: auto; /* Set the height of your div */
-    overflow: hidden; /* Hide any part of the image that goes beyond the div */
-    max-height: 800px;
-    z-index: 2;
-    align-items: center;
-    transition: transform 0.5s ease;
-}
-
-.img-div img {
-    position: relative;
+.About_txt img {
+    height: max(12vh, 10vw);
+    width: auto;
     
-    width: auto; /* Make the image take up 100% of the width of the div */
-    height: 100%; /* Maintain the aspect ratio of the image */
-    display: block; /* Make the image a block element to prevent any extra space below it */
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+@media screen and (max-width: 950px) {
+    .About {
+        flex-direction:column;
+        align-items: center;
+    }
+
+    .About_txt img {
+        margin: 0 auto;
+    }
+
+    .About img {
+        width: 50%;
+    }
 
 }
 
+/* Portfolio */ 
 
-.about_kop {
-    justify-self: flex-start;
-    position: relative;
-
-}
-
-.kop {
-    font-family: 'EB Garamond';
-    font-size: 45px;
+.image_kop {
+    height: max(12vh, 10vw);
+    padding: 0% 0%;
+    display:flex;
+    justify-content:center;
 
 }
-
-#pfk {
-    margin-bottom: 80px;
-    width: 100%;
-    text-align: center;
-}
-
 .text {
     font-family: 'Raleway';
-    font-size: 20px;
+    font-size: max(1.3vw, 15px);
 
 }
 
-.portfolio {
+.image_kop img {
+    height: 100%;
+}
+
+.cirkels {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -184,12 +182,10 @@ body{
 
     /* background: linear-gradient(to right, rgba(156, 219, 246, 0.5), rgba(148, 206, 196, 0.5), rgba(150, 211, 144, 0.5)); */
     height: auto;
-    width: 100vw;
-    margin: 0;
-
-
-
+    width: 100%;
+    margin-top: 8vh;
 }
+
 
 .styled-link {
     margin-top: 2vh;
@@ -257,7 +253,7 @@ body{
 
 
 .cirkelkop {
-    font-size: 20px;
+    font-size: max(1.3vw, 15px);
     position: absolute;
     width: 19vw;
     min-width: 200px;
@@ -267,7 +263,11 @@ body{
     text-align: center;
     z-index: 1;
 
+    color: black;
+    text-decoration: none; /* Remove underline */
+
 }
+
 .cirkelkop:hover {
     font-style: italic;
 }
@@ -297,198 +297,16 @@ body{
     width: 120%;
 }
 
-.Contact {
-    margin-top: 50px;
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    flex-shrink: 0;
-    justify-content: space-between;
-    height: auto;
-    overflow: hidden;
-}
-
-.text_div {
-    max-width: 40vw;
-
-}
-.kaartje_div {
-    display: flex;
-    flex-shrink: 0;
-    width: 40vw;
-    align-items: center;
-
-}
-
-.kaartje_div img {
-    width: 100%;
-    height: auto;
-    transform: rotate(-4deg);
-}
-
-.contact_kop{
-    width: 40vw;
-    height: auto;
-    margin-left: 10vw;
-    margin-right: 5vw;
-    margin-bottom: 20px;
-    
-    position: relative;
-
-}
-.contact_text {
-    margin: 5px 10vw;
-    margin-right: 5vw;
-    width: 40vw;
-    max-width: 80vw;
-    height: fit-content;
-
-}
-
-.socials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 50px 10vw;
-    background-color: rgb(255, 255, 255);
-    width: 40vw;
-    height: auto;
-
-}
-
-.socials .fa {
-    position: absolute;
-    top: 100%;
-    bottom: 50%;
-    color: #000000;
-    font-size: 30px;
-    line-height: 50px;
-    transition: .5s;
-}
-.socials .social:nth-of-type(1):hover {
-    color: #3b5999;
-}
-
-.socials .social:nth-of-type(2):hover {
-    color: #e4405f;
-}
-
-.socials .social:nth-of-type(3):hover {
-    color: #0077B5;
-}
-
-.socials .social:nth-of-type(4):hover {
-    color: #cd201f;
-}
-
-.socials a {
-    position: relative;
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    width: 25px;
-    height: 25px;
-    margin: 5px 5px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.195);
-    text-align: center;
-    font-size: 20px;
-    transition: 0.5s;
-}
-.socials a:hover {
-    transform: rotate(0deg) skew(0deg) translate(0px, -10px);
-}
-
-footer {
-    margin-top: 10vh;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: #d0d0d0;
-    text-align: center;
-}
-
-
-a {
-    color: black;
-    text-decoration: none; /* Remove underline */
-}
-
-/* Set link hover color to gray */
-a:hover {
-    color: gray;
-}
-
-/* Set link focus color to gray */
-a:focus {
-    color: gray;
-}
-
-/* Set link active color to gray */
-a:active {
-    color: gray;
-}
-
 @media screen and (max-width: 950px) {
     .cirkel {
-        margin-top: 5vh;
+        margin-top: 8vh;
         margin-bottom: 5vh;
     }
 }
 
-@media screen and (max-width: 1200px) and (min-width:650px){
-    .img-div img {
-        transform: translateX(-15%);
-        
-    }
-}
-
-
-@media screen and (max-width: 750px) {
-    .kaartje_div {
-        display: none;
-    }
-    .text_div {
-        order: 2;
-        max-width: none;
-    }
-    .Contact {
-        justify-content: center;
-    }
-
-    .contact_text {
-        width: 80vw;
-    }
-    .socials {
-        width: 80vw;
-        justify-content: center;
-    }
-
-    .socials a {
-        margin: 10px 10px;
-        transform: translate(0,0px);
-    }
-
-    .socials a:hover {
-        transform: translate(0,-10px) 
-
-    }
-
-}
 @media screen and (max-width: 650px) {
-    .Button {
-        font-size: 25px !important;
-    }
-    .kop {
-        font-size: 25px;
-    }
-    .text {
-        font-size: 15px;
-    }
+
     .cirkelkop {
-        font-size: 15px;
         width: 25vh;
         height: 30vh;
         top: -15%;
@@ -499,45 +317,165 @@ a:active {
         margin-top: 5vh;
         margin-bottom: 5vh;
     }
-    #pfk {
-        margin-top: 50px;
-        margin-bottom: 30px;
-    }
-    .About {
-        height: auto;
-        flex-wrap: wrap;
-        z-index: 0;
-        justify-content: center;
-        background-color: #ffffff
-    }
+}
 
-    .About_Axelle_txt {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 100%;
-    
-    }
-    .img-div {
-        display: flex;
-        width: 100vw; /* Set the width of your div */
-        height: auto; /* Set the height of your div */
-        overflow: hidden; /* Hide any part of the image that goes beyond the div */
-        max-height: 800px;
-        z-index: 2;
-        align-items: center;
-        transition: transform 0.5s ease;
-    }
-    
-    .img-div img {
-        position: relative;
-        content: url(media/axelle_wit.jpg);
-        
-        width: 100%; /* Make the image take up 100% of the width of the div */
-        height: auto; /* Maintain the aspect ratio of the image */
-        display: block; /* Make the image a block element to prevent any extra space below it */
 
-        transform: translateX(0%);
-    }
-    }
 
+/* Contact */ 
+
+.Contact {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.contact_text_holder {
+    width:60vw;
+}
+
+.contact_text_holder {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+/* Contact Form */ 
+
+.contact_form_holder {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 0 10%;
+}
+
+form {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  max-width: 60%;
+  width: 60vw;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: max(1.1vw, 15px);
+  resize: vertical; /* allow vertical resizing */
+  transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #ff6652;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #c93a27;
+  color: white;
+  font-size: max(1.3vw, 15px);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #c93a275b;
+}
+
+/* Socials */ 
+
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    padding: 10vh 0vh 4vh 0;
+}
+
+.socials .fa {
+    color: #000000;
+    transition: .5s;
+}
+.socials .social:nth-of-type(1):hover {
+    color: #e4405f;
+}
+
+.socials .social:nth-of-type(2):hover {
+    color: #3b5999;
+}
+
+.socials .social:nth-of-type(3):hover {
+    color: #cd201f;
+}
+
+.socials a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: max(1.1vw, 15px);
+
+    margin: 5px 5px;
+    padding: 0 2vw;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    transition: 0.5s;
+    color:black;
+    text-decoration: none; /* Remove underline */
+}
+
+.socials i {
+    font-size: max(1.1vw, 15px);
+
+}
+
+.socials p {
+    font-size: max(1.1vw, 15px);
+    padding: 0 2vw;
+    width:fit-content;
+
+}
+
+.socials a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0px, -10px);
+    color: gray;
+}
+
+
+/* Footer */ 
+footer {
+    width: 100vw;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #d0d0d0;
+    text-align: center;
+}
+
+footer p {
+    font-size: max(1.1vw, 15px);
+    padding: 0px 1.5vw;
+    width: fit-content;
+}

@@ -6,141 +6,217 @@
     <script src="https://kit.fontawesome.com/1fdac32795.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Axelle Daem is een professionele fotografe uit Geraardsbergen. Neem zeker contact op voor een persoonlijke fotoshoot of een cool project! Akifotografie">
+    <meta name="description" content="Hej! Ik ben Axelle Daem, een creatieveling en fotografe uit Geraardsbergen. Neem zeker contact op voor een persoonlijke fotoshoot of een cool project! Akifotografie">
     <title>Aki Fotografie</title>
 
     <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
-    <h class="seo">Axelle Daem</h>
-    <h class="seo">akifotografie</h>
-    <h class="seo">photography, fotografie, akifotografie</h>
-    <h class="seo">Geraardsbergen</h>
-    <h class="seo">fotografe, Geraardsbergen, film, kunst, gedichten, fotoshoot, communie, photoshoot, trouwfotografie, trouwen</h>
 
-    <div class="Links">
-        <script src="scroll.js"></script>
-        <div class="Button kop" id="aboutme_knop"> over mij </div>
-        <div class="Bolleke"> &bullet; </div>
-        <div class="Button kop" id="portfolio_knop"> portfolio </div>
-        <div class="Bolleke"> &bullet; </div>
-        <div class="Button kop" id="contact_knop"> contact </div>
+    <!-- Naam & logo -->
+
+    <div class="Naamlogodiv">
+
+        <img src="media/home/Logonaam.png" id="naamlogo" alt="Axelle Daem, Akifotografie">
+
     </div>
+
+    <!-- Links -->
+    <div class="Links">
+        <div class="Button kop" data-target="aboutme"> over mij </div>
+        <div class="Bolleke"> &bullet; </div>
+        <div class="Button kop" data-target="portfolio"> portfolio </div>
+        <div class="Bolleke"> &bullet; </div>
+        <div class="Button kop" data-target="contact"> contact </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.Button.kop').forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+            console.log(targetElement)
+            // Slow scroll using scrollIntoView with behavior smooth
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            }
+        });
+        });
+    </script>
+
+    <!-- Video -->
 
     <div class="vid_div">
-        <video autoplay muted loop>
-            <source src="media/akivid.mp4" type="video/mp4">
+        <video id="akivid" autoplay muted>
+            <source src="media/home/akivid.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
     </div>
 
+    <script>
+        const video = document.getElementById('akivid');
+
+        video.addEventListener('ended', function () {
+            console.log('Video ended. Waiting 20 seconds...');
+            setTimeout(function () {
+                video.currentTime = 0;
+                video.play();
+            }, 30000); // 30 seconds
+        });
+    </script>
+
+    <!-- About -->
 
     <div class="About" id="aboutme">
-        <div class="img-div">
-            <img src="media/over_mij_site_smudged.jpg" alt="Axelleke">
-        </div>
         
-        <div class="About_Axelle_txt"> 
+        <img src="media/overmij/akifoto.png" alt="Axelleke">
 
-        <p class="kop about_kop">over mij</p>
+        <div class="About_txt"> 
 
-        <p class='text about_text'>
-            Kort samengevat ben ik een 21-jarige creatieveling uit Geraardsbergen. Op mijn 12e vond ik niet alleen een klein roze cameraatje maar ook mijn passie.
-        <p class='text about_text'>
-            Na vier jaar kunstonderwijs aan Sint-Lucas in Gent, heb ik een jaar doorgebracht aan het KASK & Conservatorium. Op dit moment volg ik de opleiding tot leerkracht secundair onderwijs.
-        </p>
-        <p class ='text about_text'>
-          
-        </p>
+            <img src="media/overmij/Hej.png" alt="Hey!">
 
-        <p class='text about_text'>
-            Klaar om de wereld door mijn lens te bekijken? 
-        </p>
-     
+            <p>
+                Ik ben Axelle Daem, een creatieve duizendpoot, geboren en getogen in Geraardsbergen. 
+                In 2015 vond ik op mijn twaalfde een klein roze cameraatje terug in een schuif, 
+                en sindsdien zijn mijn ogen altijd op zoek naar kleur en kadrering.
+            </p>
+            <p>
+                Vier jaar lang leerde ik een stevige basis voor video- en fotografie aan het kunsthumaniora Sint-Lucas in Gent. 
+                Ook buiten de lesuren liet ik mijn verbeelding de vrije loop met allerlei projecten. Daarna volgde een jaar fotografie aan het KASK, 
+                tot ik besloot een ander spoor te nemen: ik studeer nu voor leerkracht. Naast fotografie heb ik namelijk ook een groot hart voor jeugd(werk), 
+                iets waar ik me als vrijwilliger volop voor inzet.
+            </p>
+            <p>
+                Mijn fotografie is net zo breed als mijn interesses, want kiezen is verliezen! Ik heb van alles voor mijn lens gehad: business events, communieshoots, 
+                trouwceremonies, begrafenissen, spontane momenten of doordachte composities. Ik ben altijd nieuwsgierig naar wat ik kan documenteren, 
+                zolang ik er een eigen draai aan kan geven.
+            </p>
 
         </div>
     </div>
 
-    <!-- <div class="divider">
-        <hr>
-    </div> -->
+    <!-- Portfolio -->
 
-    <div class="portfolio", id="pfo">
+    <div class="image_kop" id="portfolio">
+        <img src="media/portfolio/portfolio titel.png">
+    </div>
 
-        <p id ="pfk" class="kop" target="_blank">portfolio</p>
+    <div class="cirkels">
+
 
 
         <div class="cirkel c2">
             <a class="cirkelkop" href="https://akifotografie.passgallery.com/-portfolio/gallery" target="_blank">algemeen</a>
             <div class="c_img_div">
-                <img src="media/algemeen.png" id="mensen_foto" alt="foto">
+                <img src="media/portfolio/bompi.png" id="mensen_foto" alt="foto">
             </div>
         </div>
 
         <div class="cirkel c1"> 
             <a class="cirkelkop" href="https://akifotografie.passgallery.com/-mensen/gallery" id="mensen" target="_blank">mensen</a>
             <div class="c_img_div">
-                <img src="media/portret_2.png" id="mensen_foto" alt="foto">
+                <img src="media/portfolio/mensen (2).png" id="mensen_foto" alt="foto">
             </div>
         </div>
 
         <div class="cirkel c3">
             <a class="cirkelkop" href="https://akifotografie.passgallery.com/-documentaire/gallery" target="_blank">documentaire</a>
             <div class="c_img_div">
-                <img src="media/docu_2.png" id="mensen_foto" alt="foto">
+                <img src="media/portfolio/documentaire.png" id="mensen_foto" alt="foto">
             </div>
         </div>
 
         <div class="cirkel c4">
             <a class="cirkelkop" href="https://akifotografie.passgallery.com/-auton/gallery" target="_blank">autonoom werk</a>
             <div class="c_img_div">
-                <img src="media/autonoom.png" id="mensen_foto" alt="foto">
+                <img src="media/portfolio/autonoom.png" id="mensen_foto" alt="foto">
             </div>
         </div>
         <div class="cirkel c5">
             <a class="cirkelkop" href="https://www.youtube.com/channel/UCZBn20odBul4zLT8rAYL-7Q" target="_blank">video</a>
             <div class="c_img_div">
-                <img src="media/video.png" id="mensen_foto" alt="foto">
+                <img src="media/portfolio/video.png" id="mensen_foto" alt="foto">
             </div>
         </div>
     </div>
 
-    <!-- <div class="divider">
-        <hr>
-    </div> -->
+    <!-- Contact -->
 
-    <div class="Contact", id="ct">
-    
-    <div class="text_div">
-        <p class="kop contact_kop">contact</p>
-        <p class="text contact_text">
-            Wil jij je kostbare momenten vereeuwigen zonder de magie ervan te verstoren, of ben je op zoek naar een creatieveling die met een camera overweg kan? Aarzel niet om contact met me op te nemen voor een gepersonaliseerde fotoshoot, een leuk project of voor meer informatie!   
-        <p class="text contact_text">
-            e-mailadres <strong>akifotografie@outlook.com</strong>
-        </p>
+    <div class="image_kop" id="contact">
+        <img src="media/contact/contact titel.png">
+    </div>
 
-        <div class = "socials">
-            <a class="social" draggable="false" href="https://www.facebook.com/AkiFotografie2015/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a class="social" draggable="false" href="https://www.instagram.com/akifotografie/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a class="social" draggable="false" href="mailto:akifotografie@outlook.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
-            <a class="social" draggable="false" href="https://www.youtube.com/channel/UCZBn20odBul4zLT8rAYL-7Q" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    <div class="Contact">
+        <div class="contact_text_holder">
+            <p class="text contact_text">
+                Wil jij je kostbare momenten vereeuwigen zonder de magie ervan te verstoren, of ben je op zoek naar een creatieveling die met een camera overweg kan? Aarzel niet om contact met me op te nemen voor een gepersonaliseerde fotoshoot, een leuk project of voor meer informatie!   
         </div>
-        
+
+        <div class="image_kop">
+            <img src="media/contact/pijl (contact).png">
+        </div>
+
+        <div class="contact_form_holder">
+            <form target="_blank" method="POST" action="https://formsubmit.co/gwdelvoye@gmail.com">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                        <input type="text" name="naam" class="form-control" placeholder="Naam" required>
+                        </div>
+                        <div class="col">
+                        <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                <textarea placeholder="Jouw bericht" 
+                class="form-control" name="message" rows="15" 
+                required spellcheck="false"
+                oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'">
+Hey Axelle!
+
+Ik ben geïnteresseerd om samen te werken.
+
+
+
+Met vriendelijke groeten,
+
+[Jouw Naam]
+
+
+</textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-dark btn-block">Verzenden</button>
+                <input type="hidden" name="_next" value="https://www.akifotografie.be/dankje">
+
+            </form>
+        </div>
     </div>
 
-
-    <div class="kaartje_div">
-        <img src="media/visitekaartje_met_schaduw.png">
+    <div class = "socials">
+        <a class="social" draggable="false" href="https://www.instagram.com/akifotografie/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a class="social" draggable="false" href="https://www.facebook.com/AkiFotografie2015/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a class="social" draggable="false" href="https://www.youtube.com/channel/UCZBn20odBul4zLT8rAYL-7Q" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <p><i class="fa-solid fa-phone"></i> +32 458 11 93 41</p>
+        <p><i class="fa-regular fa-envelope" style="font-size: 0.9em"></i> axelle@akifotografie.be</p>            
     </div>
 
-    </div>
+    </body>
+
+<footer class="bottom_footer">
+    <p>&copy; <span id="year"></span> Axelle Daem</p>
+
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <p style="width: 10px"> | </p>
+    <p>Website made with <i class="fa-regular fa-heart"  style="font-size: 0.9em"></i> by Gyan Delvoye.</p>
+</footer>
 
 
-    <footer>
-        <p>&copy; 2024 Axelle Daem | Website made with &#9825; by Gyan Delvoye.</p>
-    </footer>
-    
-</body>
 </html>
