@@ -24,13 +24,29 @@
 
     <!-- Links -->
     <div class="Links">
-        <script src="scroll.js"></script>
-        <div class="Button kop"> over mij </div>
+        <div class="Button kop" data-target="aboutme"> over mij </div>
         <div class="Bolleke"> &bullet; </div>
-        <div class="Button kop"> portfolio </div>
+        <div class="Button kop" data-target="portfolio"> portfolio </div>
         <div class="Bolleke"> &bullet; </div>
-        <div class="Button kop"> contact </div>
+        <div class="Button kop" data-target="contact"> contact </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.Button.kop').forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+            console.log(targetElement)
+            // Slow scroll using scrollIntoView with behavior smooth
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            }
+        });
+        });
+    </script>
 
     <!-- Video -->
 
@@ -74,7 +90,7 @@
 
     <!-- Portfolio -->
 
-    <div class="image_kop">
+    <div class="image_kop" id="portfolio">
         <img src="media/portfolio/portfolio titel.png">
     </div>
 
@@ -119,51 +135,77 @@
 
     <!-- Contact -->
 
-    <div class="image_kop">
+    <div class="image_kop" id="contact">
         <img src="media/contact/contact titel.png">
     </div>
 
-    <div class="Contact", id="ct">
+    <div class="Contact">
         <div class="contact_text_holder">
             <p class="text contact_text">
                 Wil jij je kostbare momenten vereeuwigen zonder de magie ervan te verstoren, of ben je op zoek naar een creatieveling die met een camera overweg kan? Aarzel niet om contact met me op te nemen voor een gepersonaliseerde fotoshoot, een leuk project of voor meer informatie!   
-            <p class="text contact_text">
-                e-mailadres <strong>akifotografie@outlook.com</strong>
-            </p>
-
-            <div class = "socials">
-                <a class="social" draggable="false" href="https://www.facebook.com/AkiFotografie2015/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a class="social" draggable="false" href="https://www.instagram.com/akifotografie/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a class="social" draggable="false" href="mailto:akifotografie@outlook.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
-                <a class="social" draggable="false" href="https://www.youtube.com/channel/UCZBn20odBul4zLT8rAYL-7Q" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            </div>
         </div>
 
+        <div class="image_kop">
+            <img src="media/contact/pijl (contact).png">
+        </div>
 
-    <div class="contact_form_holder">
-        <form target="_blank" action="https://formsubmit.co/gwdelvoye@gmail.com" method="POST">
-            <div class="form-group">
-                <div class="form-row">
-                    <div class="col">
-                    <input type="text" name="name" class="form-control" placeholder="Full Name" required>
-                    </div>
-                    <div class="col">
-                    <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+        <div class="contact_form_holder">
+            <form target="_blank" method="POST" action="https://formsubmit.co/gwdelvoye@gmail.com">
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                        <input type="text" name="naam" class="form-control" placeholder="Naam" required>
+                        </div>
+                        <div class="col">
+                        <input type="email" name="email" class="form-control" placeholder="E-mail" required>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-group">
-            <textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
-        </form>
+                <div class="form-group">
+                <textarea placeholder="Jouw bericht" 
+                class="form-control" name="message" rows="15" 
+                required spellcheck="false"
+                oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'">
+Hey Axelle!
+
+Ik ben geïnteresseerd om samen te werken.
+
+
+
+Met vriendelijke groeten,
+
+[Jouw Naam]
+
+
+</textarea>
+                </div>
+                <button type="submit" class="btn btn-lg btn-dark btn-block">Verzenden</button>
+                <input type="hidden" name="_next" value="akifotografie.be/dankje">
+
+            </form>
+        </div>
     </div>
 
+    <div class = "socials">
+        <a class="social" draggable="false" href="https://www.instagram.com/akifotografie/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a class="social" draggable="false" href="https://www.facebook.com/AkiFotografie2015/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a class="social" draggable="false" href="https://www.youtube.com/channel/UCZBn20odBul4zLT8rAYL-7Q" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <p><i class="fa-solid fa-phone"></i> +32 458 11 93 41</p>
+        <p><i class="fa-regular fa-envelope" style="font-size: 0.9em"></i> axelle@akifotografie.be</p>            
+    </div>
+
+    </body>
+
+<footer class="bottom_footer">
+    <p>&copy; <span id="year"></span> Axelle Daem</p>
+
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <p style="width: 10px"> | </p>
+    <p>Website made with <i class="fa-regular fa-heart"  style="font-size: 0.9em"></i> by Gyan Delvoye.</p>
+</footer>
 
 
-    <footer>
-        <p>&copy; 2024 Axelle Daem | Website made with &#9825; by Gyan Delvoye.</p>
-    </footer>
-    
-</body>
 </html>

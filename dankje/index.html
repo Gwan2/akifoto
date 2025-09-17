@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="media/favicon.ico">
+  <script src="https://kit.fontawesome.com/1fdac32795.js" crossorigin="anonymous"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bedankt!</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Raleway';
+      display: flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content:space-between;
+      flex:1;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .Naamlogodiv {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    height: max(8vh, 6vw);
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center; /* Center the image horizontally (along main axis)*/
+    }
+
+    #naamlogo {
+    height: auto;
+    max-height: 100%;
+    max-width:80%;
+}
+    h1 {
+      font-size: max(2vh, 2vw);
+    }
+
+    .container {
+      font-size: max(2vh, 2vw);
+      padding:5%;
+    }
+
+    footer {
+    width: 100vw;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #d0d0d0;
+    text-align: center;
+    }
+
+    footer p {
+        padding: 0px 1.5vw;
+        width: fit-content;
+    }
+
+  </style>
+
+</head>
+<body>
+    <div class="Naamlogodiv">
+        <img src="../media/home/Logonaam.png" id="naamlogo" alt="Axelle Daem, Akifotografie">
+     </div>
+  <div class="container">
+    <h1>Dankjewel voor je bericht!</h1>
+    <p>Je bericht is goed verzonden. Ik stuur zo snel mogelijk een berichtje terug.</p>
+    <p>Je kunt dit tabblad nu sluiten.</p>
+  </div>
+
+  
+</body>
+
+<footer class="bottom_footer">
+    <p>&copy; <span id="year"></span> Axelle Daem</p>
+
+    <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <p style="width:10px"> | </p>
+    <p>Website made with <i class="fa-regular fa-heart"  style="font-size: 0.9em"></i> by Gyan Delvoye.</p>
+
+</footer>
+</html>
