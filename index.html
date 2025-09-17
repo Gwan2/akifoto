@@ -51,12 +51,23 @@
     <!-- Video -->
 
     <div class="vid_div">
-        <video autoplay muted loop>
+        <video id="akivid" autoplay muted>
             <source src="media/home/akivid.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
-
     </div>
+
+    <script>
+        const video = document.getElementById('akivid');
+
+        video.addEventListener('ended', function () {
+            console.log('Video ended. Waiting 20 seconds...');
+            setTimeout(function () {
+                video.currentTime = 0;
+                video.play();
+            }, 30000); // 30 seconds
+        });
+    </script>
 
     <!-- About -->
 
